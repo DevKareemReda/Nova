@@ -206,6 +206,14 @@ a.link:hover {
   margin-bottom: 0;
 }
 
+.nav-menu .bars:hover span:first-child {
+  transform: translateY(3px);
+}
+
+.nav-menu .bars:hover span:last-of-type {
+  transform: translateY(-3px);
+}
+
 .nav-menu .bars.active span:first-child {
   transform: translateY(10px) rotate(45deg);
 }
@@ -551,12 +559,6 @@ span {
 .teachers-inner p {
   line-height: 1.5;
 }
-
-/* @media screen and (max-width: 992px) {
-  .sec {
-    margin-top: 400px;
-  }
-} */
 
 /* _____ style our services _____ */
 .services-inner {
