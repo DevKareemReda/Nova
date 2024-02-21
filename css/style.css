@@ -524,6 +524,8 @@ main {
   background: url('../images/circle.png.webp');
 }
 
+
+
 .bg-circle p {
   margin: 20px 0;
   line-height: 1.5;
@@ -573,7 +575,11 @@ main {
   }
 }
 
-
+@media screen and (max-width: 365px) {
+  .bg-circle::before {
+      max-width: 500px;
+    }
+}
 /* _____ style loop this our teachers _____ */
 .teachers-inner {
   border-radius: 70px 70px 200px 70px;
