@@ -1,0 +1,39 @@
+// _____ nav-menu _____ 
+nav.nav-menu
+    .container
+        .row.justify-content-between.align-items-center
+            .col.col-md-1
+                a.logo(href='#') nova
+            .col.col-md-1.d-lg-none.d-block
+                .bars
+                    span
+                    span
+                    span
+            .col.col-lg-11.d-lg-block.d-none
+                ul.menu
+                    block homeActive
+                        li: a.active(href='index.html') home
+                    li
+                        a(href='#')
+                            | dropdown 
+                            i.fa-solid.fa-angle-down
+                        ul
+                            li: a(href='#') menu one
+                            li
+                                a(href='#')
+                                    | menu two 
+                                    i.fa-solid.fa-angle-down
+                                ul
+                                    li: a(href='#') sub menu one
+                                    li: a(href='#') sub menu two
+                                    li: a(href='#') sub menu three
+                            li: a(href='#') menu three
+                    block classesActive
+                        li: a(href='classes.html') classes
+                    block blogActive
+                        li: a(href='blog.html') blog
+                    block aboutActive
+                        li: a(href='about.html') about
+                    block contactActive
+                        li: a(href='contact.html') contact us
+// ./nav-menu 

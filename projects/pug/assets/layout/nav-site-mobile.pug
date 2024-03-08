@@ -1,0 +1,27 @@
+// _____ nav-site _____
+nav.site-nav
+    .mobile-site-close
+        span &times;
+    main
+        ul.menu-site
+            li: a.active(href='index.html') home
+            li
+                a(href='#')
+                    | dropdown 
+                    i.fa-solid.fa-angle-down
+                ul
+                    li: a(href='#') menu one
+                    li
+                        a(href='#')
+                            | menu two 
+                            i.fa-solid.fa-angle-down
+                        ul
+                            li: a(href='#') sub menu one
+                            li: a(href='#') sub menu two
+                            li: a(href='#') sub menu three
+                    li: a(href='#') menu three
+            li: a(href='classes.html') classes
+            li: a(href='blog.html') blog
+            li: a(href='about.html') about
+            li: a(href='contact.html') contact us
+// ./nav-site

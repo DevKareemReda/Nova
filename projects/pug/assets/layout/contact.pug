@@ -1,0 +1,38 @@
+block contact
+    // contact
+    section.section.remove-form
+        .container
+            .row.mb-5
+                .col-md-8.mx-auto.text-center
+                    .main-title.mb-5
+                        img(src='images/karate-divider.png.jpg' alt='karate' loading="lazy")
+                        h2 get in touch
+            .row.align-items-center
+                .col-lg-6.col-sm-12
+                    form(action='')
+                        .row
+                            .col-6
+                                label(for='first') First name
+                                input#first(type='text' name='firstName')
+                            .col-6
+                                label(for='last') Last name
+                                input#last(type='text' name='lasttName')
+                            .col-md-12
+                                label(for='email') Email address
+                                input#email(type='email' name='email')
+                            .col-md-12
+                                label(for='msg') Message
+                                textarea#msg(type='email' name='message')
+                            .col-md-12.mb-5
+                                button.btn.btn-primary(href='#') send message
+                .col-md-5.ms-lg-auto.mt-lg-0
+                    .contact-connect
+                        i.fa-solid.fa-location-dot
+                        p 155 Market St #101, Paterson, NJ 07505, United States
+                    .contact-connect
+                        i.fa-solid.fa-phone
+                        p +1 202 2020 200
+                    .contact-connect
+                        i.fa-solid.fa-envelope
+                        p @info@mydomain.com
+    // ./contact
