@@ -77,7 +77,10 @@ let copy = document.querySelector(".copy span");
 copy.textContent = new Date().getFullYear();
 
 let removeForm = document.querySelector(".remove-form");
-if (window.location.pathname === "/D:/Nova/dist/index.html") {
+if (
+  location.pathname === "/D:/Nova/dist/index.html" ||
+  location.pathname === "https://nova-karate.netlify.app"
+) {
   removeForm.style.display = "none";
 }
 
