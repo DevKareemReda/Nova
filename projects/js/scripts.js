@@ -123,3 +123,70 @@ openSwitcherColor.onclick = function () {
     this.parentElement.classList.remove("active");
   }
 };
+
+let form = document.querySelector("form.form-enroll");
+let enroll = document.querySelector(".enroll-overlay");
+let closeEnroll = document.querySelector(".close");
+let allEnroll = document.querySelectorAll(".enroll");
+let user = document.querySelector(".enroll-inner form input[type='text']");
+let email = document.querySelector(".enroll-inner form input[type='email']");
+let pass = document.querySelector(".enroll-inner form input[type='password']");
+
+form.addEventListener("submit", function (e) {
+  if (!validUser() || !validPass() || !validEmail()) {
+    e.preventDefault();
+  }
+  validUser();
+  validEmail();
+  validPass();
+})
+
+function validUser() {
+  if (user.value === "") {
+      user.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> username`
+  } else {
+      user.nextElementSibling.innerHTML = `username`
+      return true
+  }
+}
+user.oninput = validUser;
+
+function validEmail() {
+  if (email.value === "") {
+      email.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> email`
+  } else {
+      email.nextElementSibling.innerHTML = `email`
+      return true
+  }
+}
+email.oninput = validEmail;
+
+function validPass() {
+  if (pass.value === "") {
+      pass.nextElementSibling.innerHTML = `<i class="fa-solid fa-circle-exclamation"></i> password`
+  } else {
+      pass.nextElementSibling.innerHTML = `password`
+      return true
+  }
+}
+pass.oninput = validPass;
+
+
+allEnroll.forEach(el => {
+  el.onclick = function(e) {
+    e.preventDefault();
+    enroll.classList.add("active")
+  }
+})
+
+closeEnroll.onclick = function () {
+  enroll.classList.remove("active")
+}
+
+window.onkeydown = function (e) {
+  if (e.keyCode === 27 || e.key === "Escape") enroll.classList.remove("active")
+}
+
+window.onclick = function (e) {
+  if (e.target === enroll)  enroll.classList.remove("active")
+}

@@ -1,0 +1,22 @@
+// _____ enroll-now _____
+.enroll-overlay
+  .enroll-inner
+    span.close &times;
+    h3 sign in your account
+    form.form-enroll(action='')
+      .position-relative.mb-3
+        input(type='text' name='username' placeholder='eg:james_smith')
+        span.label-inp username      
+      .position-relative.mb-3
+        input(type='email' name='email' placeholder='example@outlook.com')
+        span.label-inp email
+      .position-relative.mb-3
+        input(type='password' name='password' placeholder='type password')
+        span.label-inp password
+      .position-relative.mb-4
+        input#checked(type='checkbox' name='remember')
+        label(for='checked')  remember me
+      .position-relative.my-3
+        input(type='submit' name='submit' value='Log In')
+      a.forgot(href='#') forgot your password?
+  // ./enroll-now
