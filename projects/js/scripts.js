@@ -27,6 +27,7 @@ $(function () {
       },
     },
   });
+  new WOW().init();
 });
 
 let preloader = document.querySelector(".preloader");
